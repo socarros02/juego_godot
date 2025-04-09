@@ -34,10 +34,10 @@ func tiro(pat):
 	gol = ataja(pat,faseActual)
 	if gol==1:
 		
-		contador=contadorFunc(contador)
+		
 		puntosActuales=puntos(faseActual,puntosActuales)
 		faseActual=fase(contador,faseActual)
-		
+		contador=contadorFunc(contador)
 		print("gol!!!|puntos:%d|fase %d|"%[puntosActuales,faseActual])
 	else:
 		print("atajo el aquero|puntos:%d|fase %d|"%[puntosActuales,faseActual])
@@ -50,7 +50,7 @@ func contadorFunc(contador):
 	return contador	
 func fase(contador,fase):
 	var faseactual=fase
-	if contador % 3 == 0 && faseactual < faseMaxima:
+	if contador == 3 && faseactual < faseMaxima:
 		faseactual=faseactual+1
 	return faseactual
 	
