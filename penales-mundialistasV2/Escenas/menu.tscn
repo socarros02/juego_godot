@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8eet02hutawi"]
+
+[ext_resource type="Script" uid="uid://bi4t4tr6icowt" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://c2f2hlmst3u45" path="res://imagen/estadio.jpg" id="2_p25xy"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouk20")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p25xy")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = -50.5
+offset_right = 86.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "MODO ARCADE"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "MODO MUNDIALISTA"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "INFORMACION"
+
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]

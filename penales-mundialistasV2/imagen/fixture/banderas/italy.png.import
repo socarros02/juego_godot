@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2f2hlmst3u45"
-path="res://.godot/imported/estadio.jpg-2e0b071ffef9c4b87b11e423d0bccad5.ctex"
+uid="uid://p3ih8y10bxq0"
+path="res://.godot/imported/italy.png-e3d75d1caabb31727d86c44329e46d46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/estadio.jpg"
-dest_files=["res://.godot/imported/estadio.jpg-2e0b071ffef9c4b87b11e423d0bccad5.ctex"]
+source_file="res://imagen/banderas/italy.png"
+dest_files=["res://.godot/imported/italy.png-e3d75d1caabb31727d86c44329e46d46.ctex"]
 
 [params]
 

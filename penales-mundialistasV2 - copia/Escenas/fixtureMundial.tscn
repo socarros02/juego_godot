@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://86y0g5g78mbj"]
+
+[ext_resource type="Texture2D" uid="uid://c2f2hlmst3u45" path="res://imagen/estadio.jpg" id="1_epnvb"]
+[ext_resource type="Texture2D" uid="uid://dfgge3pia31xo" path="res://imagen/fixture.drawio.png" id="2_4nhdv"]
+[ext_resource type="Texture2D" uid="uid://ce24n3ia47wdo" path="res://imagen/banderas/argentina.png" id="3_cqrll"]
+[ext_resource type="Texture2D" uid="uid://byv16rafkesal" path="res://imagen/banderas/brazil.png" id="4_i1447"]
+[ext_resource type="Texture2D" uid="uid://cji3whbd1ivyd" path="res://imagen/banderas/colombia.png" id="5_ph7er"]
+[ext_resource type="Texture2D" uid="uid://2fro4412pxer" path="res://imagen/banderas/france.png" id="6_oxlwq"]
+[ext_resource type="Texture2D" uid="uid://chl41ojgxhefy" path="res://imagen/banderas/germany.png" id="7_qmd2k"]
+[ext_resource type="Texture2D" uid="uid://p3ih8y10bxq0" path="res://imagen/banderas/italy.png" id="8_vslmk"]
+[ext_resource type="Texture2D" uid="uid://c3je4x3e3smcy" path="res://imagen/banderas/portugal.png" id="9_ouy6y"]
+[ext_resource type="Texture2D" uid="uid://bphm6dgyuvj8m" path="res://imagen/banderas/spain.png" id="10_ksh07"]
+
+[sub_resource type="GDScript" id="GDScript_576jq"]
+script/source = "extends Node2D
+"
+
+[node name="fixtureMundial" type="Node2D"]
+script = SubResource("GDScript_576jq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 648.0
+texture = ExtResource("1_epnvb")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 32.0
+offset_top = 85.0
+offset_right = 1128.0
+offset_bottom = 545.0
+texture = ExtResource("2_4nhdv")
+expand_mode = 1
+
+[node name="argentina" type="Sprite2D" parent="."]
+position = Vector2(94, 136)
+scale = Vector2(8.39781, 6.40625)
+texture = ExtResource("3_cqrll")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1066, 136)
+scale = Vector2(8.39351, 6.75)
+texture = ExtResource("4_i1447")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1070, 506)
+scale = Vector2(8.375, 7.08333)
+texture = ExtResource("5_ph7er")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(92, 380)
+scale = Vector2(8.5625, 6.2885)
+texture = ExtResource("6_oxlwq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1064.5, 259.375)
+scale = Vector2(8.1875, 6.20312)
+texture = ExtResource("7_qmd2k")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(93, 260)
+scale = Vector2(8.21875, 6.5)
+texture = ExtResource("8_vslmk")
+
+[node name="portugal" type="Sprite2D" parent="."]
+position = Vector2(90, 504.75)
+scale = Vector2(8.46875, 6.78125)
+texture = ExtResource("9_ouy6y")
+
+[node name="españa" type="Sprite2D" parent="."]
+position = Vector2(1068.5, 381.25)
+scale = Vector2(7.9375, 6.71875)
+texture = ExtResource("10_ksh07")

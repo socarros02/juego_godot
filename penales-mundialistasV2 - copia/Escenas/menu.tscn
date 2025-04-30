@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8eet02hutawi"]
 
-[ext_resource type="Texture2D" uid="uid://bd7bwilby26hg" path="res://imagen/estadio.jpg" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://bi4t4tr6icowt" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://bi4t4tr6icowt" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://c2f2hlmst3u45" path="res://imagen/estadio.jpg" id="2_p25xy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lti8b")
+texture = ExtResource("2_p25xy")
 expand_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="."]

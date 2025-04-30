@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2f2hlmst3u45"
-path="res://.godot/imported/estadio.jpg-2e0b071ffef9c4b87b11e423d0bccad5.ctex"
+uid="uid://dfgge3pia31xo"
+path="res://.godot/imported/fixture.drawio.png-221cef7a585a1b4595c57e1e400e5894.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/estadio.jpg"
-dest_files=["res://.godot/imported/estadio.jpg-2e0b071ffef9c4b87b11e423d0bccad5.ctex"]
+source_file="res://imagen/fixture.drawio.png"
+dest_files=["res://.godot/imported/fixture.drawio.png-221cef7a585a1b4595c57e1e400e5894.ctex"]
 
 [params]
 

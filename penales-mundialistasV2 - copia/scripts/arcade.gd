@@ -1,13 +1,10 @@
 extends Node2D
-
+@onready var mostrarPuntos: Label = $mostrarPuntos
 var contador=0
 var puntosActuales=0
 var faseActual=1 
 var puntoPenal:= Vector2(547, 557)
 const faseMaxima=4
-func _ready():
-	print("Juego listo para jugar, esperando tiro")
-	var puntoPenal = $ball.global_position
 func _on_button_pressed() -> void:
 	moverPelota(0)
 	tiro(1)
@@ -21,20 +18,20 @@ func _on_button_3_pressed() -> void:
 	tiro(3)
 
 func _on_button_4_pressed() -> void:
-	moverPelota(4)
+	moverPelota(3)
 	tiro(4)
 
 func _on_button_5_pressed() -> void:
-	moverPelota(5)
+	moverPelota(4)
 	tiro(5)
 
 func _on_button_6_pressed() -> void:
-	moverPelota(6)
+	moverPelota(5)
 	tiro(6)
-	
+
 func moverPelota(lugar):
 	var posicion=lugar
-	var opciones=[$Button,$Button2,$Button3,$Button3,$Button4,$Button5,$Button6]
+	var opciones=[$Button,$Button2,$Button3,$Button4,$Button5,$Button6]
 	var ball = $ball
 	var button = opciones[lugar]
 	var button_center= button.global_position+ button.size/2
@@ -49,11 +46,15 @@ func tiro(pat):
 		puntosActuales=puntos(faseActual,puntosActuales)
 		faseActual=fase(contador,faseActual)
 		contador=contadorFunc(contador)
+		_on_mostrarPuntaje(puntosActuales)
 		print("gol!!!|puntos:%d|fase %d|"%[puntosActuales,faseActual])
 		$ball.global_position=puntoPenal
 	else:
 		print("atajo el aquero|puntos:%d|fase %d|"%[puntosActuales,faseActual])
-		get_tree().change_scene_to_file("res://menu.tscn")
+		get_tree().change_scene_to_file("res://Escenas/menu.tscn")
+	
+func _on_mostrarPuntaje(puntos):
+	mostrarPuntos.text= "%03d" % puntos
 	
 
 func contadorFunc(contador):
@@ -83,4 +84,3 @@ func ataja(tiro,fase):
 			else:
 				gol=1
 	return gol
-	
