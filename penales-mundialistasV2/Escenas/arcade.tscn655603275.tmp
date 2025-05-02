@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckgj6t8n3a42n"]
+[gd_scene load_steps=8 format=3 uid="uid://ckgj6t8n3a42n"]
 
 [ext_resource type="Script" uid="uid://ckfq00pgafqx1" path="res://scripts/arcade.gd" id="1_658re"]
-[ext_resource type="Texture2D" uid="uid://bxqpj5cy1mx1s" path="res://imagen/fondo.png" id="2_ygsfv"]
+[ext_resource type="Texture2D" uid="uid://dnesu5s4u32s" path="res://imagen/istockphoto-646026398-612x612.jpg" id="2_4ltp0"]
 [ext_resource type="Texture2D" uid="uid://csqwttjca3scs" path="res://imagen/SoccerBall.png" id="3_4ltp0"]
 [ext_resource type="Texture2D" uid="uid://ck5edn861aamb" path="res://imagen/0.bmp" id="4_fn0ij"]
 [ext_resource type="Texture2D" uid="uid://df1f0g6f1fpbm" path="res://imagen/GOL.png" id="5_4jfan"]
 [ext_resource type="Texture2D" uid="uid://dhx7rp28kot7e" path="res://imagen/ATAJO.png" id="6_ygsfv"]
-[ext_resource type="Texture2D" uid="uid://b8hx6iyfgxex3" path="res://imagen/arqeuro1 (1).png" id="7_2evy2"]
-[ext_resource type="Texture2D" uid="uid://skbovwn6qwfo" path="res://imagen/arquero3.png" id="8_8552t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jfan"]
 font_size = 40
@@ -24,42 +22,29 @@ offset_right = 1151.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ygsfv")
+texture = ExtResource("2_4ltp0")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animacion" type="TextureRect" parent="."]
-visible = false
-offset_left = 389.0
-offset_top = 15.0
-offset_right = 676.0
-offset_bottom = 164.0
-texture = ExtResource("5_4jfan")
-expand_mode = 1
-
-[node name="atajo" type="TextureRect" parent="."]
-visible = false
-offset_left = 442.0
-offset_top = 16.0
-offset_right = 628.0
-offset_bottom = 149.0
-texture = ExtResource("6_ygsfv")
-expand_mode = 1
-
 [node name="mostrarPuntos" type="Label" parent="."]
-offset_left = 35.0
-offset_top = 16.0
-offset_right = 103.0
-offset_bottom = 71.0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 101.0
+offset_bottom = 146.0
 text = "000"
 label_settings = SubResource("LabelSettings_4jfan")
 
+[node name="ball" type="Sprite2D" parent="."]
+position = Vector2(547, 557)
+scale = Vector2(1.59343, 1.35417)
+texture = ExtResource("3_4ltp0")
+
 [node name="GridContainer" type="GridContainer" parent="."]
 show_behind_parent = true
-offset_left = 202.0
+offset_left = 86.0
 offset_top = 184.0
-offset_right = 896.0
-offset_bottom = 495.0
+offset_right = 1056.0
+offset_bottom = 479.0
 columns = 3
 
 [node name="arribaIzquierda" type="Button" parent="GridContainer"]
@@ -99,10 +84,10 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 
 [node name="vidas" type="GridContainer" parent="."]
-offset_left = 1012.0
-offset_top = 24.0
-offset_right = 1128.0
-offset_bottom = 57.0
+offset_left = 1008.0
+offset_top = 102.0
+offset_right = 1124.0
+offset_bottom = 135.0
 columns = 3
 
 [node name="corazon1" type="TextureRect" parent="vidas"]
@@ -117,24 +102,25 @@ texture = ExtResource("4_fn0ij")
 layout_mode = 2
 texture = ExtResource("4_fn0ij")
 
+[node name="animacion" type="TextureRect" parent="."]
+visible = false
+offset_left = 208.0
+offset_top = 121.0
+offset_right = 942.0
+offset_bottom = 551.0
+texture = ExtResource("5_4jfan")
+expand_mode = 1
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="arqueroEstatico" type="Sprite2D" parent="."]
-position = Vector2(543, 374)
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("7_2evy2")
-
-[node name="arqueroMovDer" type="Sprite2D" parent="."]
+[node name="atajo" type="TextureRect" parent="."]
 visible = false
-position = Vector2(784, 416)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_8552t")
-
-[node name="ball" type="Sprite2D" parent="."]
-position = Vector2(547, 557)
-scale = Vector2(1.35, 1.148)
-texture = ExtResource("3_4ltp0")
+offset_left = 349.0
+offset_top = 150.0
+offset_right = 791.0
+offset_bottom = 528.0
+texture = ExtResource("6_ygsfv")
 
 [connection signal="pressed" from="GridContainer/arribaIzquierda" to="." method="_on_arriba_izquierda_pressed"]
 [connection signal="pressed" from="GridContainer/arribaMedio" to="." method="_on_arriba_medio_pressed"]

@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfm348ckbdsyw"]
+[gd_scene load_steps=2 format=3 uid="uid://cfm348ckbdsyw"]
 
-[ext_resource type="Script" uid="uid://bt707pu10awmt" path="res://Escenas/atajar.gd" id="1_4ntf6"]
 [ext_resource type="Texture2D" uid="uid://dnesu5s4u32s" path="res://imagen/istockphoto-646026398-612x612.jpg" id="2_uos4x"]
 
 [node name="atajar" type="Node2D"]
-script = ExtResource("1_4ntf6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1143.0

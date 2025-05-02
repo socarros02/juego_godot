@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready() -> void:
+	print("fase %d"%[Global.faseActual])
 func atajar(ataja):
 	var atajar
 	atajar = atajado(ataja)
@@ -19,4 +20,3 @@ func atajado(tiro):
 	else:
 		gol=0
 	return gol
-	
