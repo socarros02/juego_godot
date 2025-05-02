@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckgj6t8n3a42n"]
+[gd_scene load_steps=12 format=3 uid="uid://ckgj6t8n3a42n"]
 
 [ext_resource type="Script" uid="uid://ckfq00pgafqx1" path="res://scripts/arcade.gd" id="1_658re"]
 [ext_resource type="Texture2D" uid="uid://bxqpj5cy1mx1s" path="res://imagen/fondo.png" id="2_ygsfv"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dhx7rp28kot7e" path="res://imagen/ATAJO.png" id="6_ygsfv"]
 [ext_resource type="Texture2D" uid="uid://b8hx6iyfgxex3" path="res://imagen/arqeuro1 (1).png" id="7_2evy2"]
 [ext_resource type="Texture2D" uid="uid://skbovwn6qwfo" path="res://imagen/arquero3.png" id="8_8552t"]
+[ext_resource type="AudioStream" uid="uid://c7unqn4aiwqtv" path="res://imagen/Grito de Gol - Hinchada. (Audio).mp3" id="9_8552t"]
+[ext_resource type="AudioStream" uid="uid://contqj2w0oql6" path="res://imagen/Abucheos - (audio).mp3" id="10_eadtj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jfan"]
 font_size = 40
@@ -118,6 +120,7 @@ layout_mode = 2
 texture = ExtResource("4_fn0ij")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 one_shot = true
 
 [node name="arqueroEstatico" type="Sprite2D" parent="."]
@@ -135,6 +138,12 @@ texture = ExtResource("8_8552t")
 position = Vector2(547, 557)
 scale = Vector2(1.35, 1.148)
 texture = ExtResource("3_4ltp0")
+
+[node name="abucheos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_eadtj")
+
+[node name="gol" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_8552t")
 
 [connection signal="pressed" from="GridContainer/arribaIzquierda" to="." method="_on_arriba_izquierda_pressed"]
 [connection signal="pressed" from="GridContainer/arribaMedio" to="." method="_on_arriba_medio_pressed"]

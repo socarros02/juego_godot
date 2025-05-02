@@ -124,13 +124,15 @@ func _on_timer_timeout() -> void:
 	$ball.global_position=puntoPenal
 	$arqueroEstatico.visible=true
 	$arqueroMovDer.visible=false
-	
+	$gol.stop()
+	$abucheos.stop()
 
 func ACTIVAR_GOL(pat,gol):
 	$animacion.visible=true
 	var opciones=[$GridContainer/arribaIzquierda,$GridContainer/arribaMedio,$GridContainer/arribaDerecha,$GridContainer/abajoIzquierda,$GridContainer/abajoMedio,$GridContainer/abajoDeecha]
 	for i in range(6):
 		opciones[i].disabled=true
+	$gol.play()	
 	moverArquero(pat,gol)
 	$Timer.start()
 	
@@ -139,6 +141,7 @@ func penalAtajado(pat,gol):
 	var opciones=[$GridContainer/arribaIzquierda,$GridContainer/arribaMedio,$GridContainer/arribaDerecha,$GridContainer/abajoIzquierda,$GridContainer/abajoMedio,$GridContainer/abajoDeecha]
 	for i in range(6):
 		opciones[i].disabled=true
+	$abucheos.play(1.0)
 	moverArquero(pat,gol)
 	$Timer.start()
 
