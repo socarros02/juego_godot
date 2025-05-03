@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3ih8y10bxq0"
-path="res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"
+uid="uid://cah2rdw5rg5eq"
+path="res://.godot/imported/ATAJO.png-b8b68f32daf626c8f74cf4e80e8d8b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/fixture/banderas/italy.png"
-dest_files=["res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"]
+source_file="res://imagen/animaciones/ATAJO.png"
+dest_files=["res://.godot/imported/ATAJO.png-b8b68f32daf626c8f74cf4e80e8d8b6e.ctex"]
 
 [params]
 

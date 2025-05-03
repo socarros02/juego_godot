@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3v76fyab2vym"
+path="res://.godot/imported/Grito de Gol - Hinchada. (Audio).mp3-4442ccf077764b024fd0acf8a6a6b2c4.mp3str"
+
+[deps]
+
+source_file="res://imagen/animaciones/Grito de Gol - Hinchada. (Audio).mp3"
+dest_files=["res://.godot/imported/Grito de Gol - Hinchada. (Audio).mp3-4442ccf077764b024fd0acf8a6a6b2c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

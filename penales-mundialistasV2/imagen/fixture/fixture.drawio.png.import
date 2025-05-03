@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfgge3pia31xo"
-path="res://.godot/imported/fixture.drawio.png-221cef7a585a1b4595c57e1e400e5894.ctex"
+path="res://.godot/imported/fixture.drawio.png-706dfb3d8e26092b1c3756d84840200a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/fixture.drawio.png"
-dest_files=["res://.godot/imported/fixture.drawio.png-221cef7a585a1b4595c57e1e400e5894.ctex"]
+source_file="res://imagen/fixture/fixture.drawio.png"
+dest_files=["res://.godot/imported/fixture.drawio.png-706dfb3d8e26092b1c3756d84840200a.ctex"]
 
 [params]
 

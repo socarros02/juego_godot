@@ -1,6 +1,28 @@
 extends Node2D
 @onready var mostrarPuntos: Label = $mostrarPuntos
+var tuto=0
 
+func _on_siguiente_pressed() -> void:
+	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
+	tutorial[tuto].visible=false
+	tuto +=1
+	if tuto<4:
+		tutorial[tuto].visible=true
+	if tuto==4:
+		$siguiente.disabled=false
+		$omitir.disabled=false
+		$siguiente.visible=false
+		$omitir.visible=false
+		
+	
+func _on_omitir_pressed() -> void:
+	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
+	for i in range(4):
+		tutorial[i].visible=false
+	$siguiente.disabled=false
+	$omitir.disabled=false
+	$siguiente.visible=false
+	$omitir.visible=false
 
 var contador=0
 
@@ -88,6 +110,7 @@ func contadorFunc(contador):
 	if contador%4==0:
 		contador=1
 	return contador	
+
 func fase(contador,fase):
 	var faseactual=fase
 	if contador == 3 && faseactual < faseMaxima:

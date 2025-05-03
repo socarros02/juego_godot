@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3ih8y10bxq0"
-path="res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"
+uid="uid://ctky4vdn0jp7m"
+path="res://.godot/imported/GOL.png-8d54657c6a343f993e8076bd897c2f72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/fixture/banderas/italy.png"
-dest_files=["res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"]
+source_file="res://imagen/animaciones/GOL.png"
+dest_files=["res://.godot/imported/GOL.png-8d54657c6a343f993e8076bd897c2f72.ctex"]
 
 [params]
 

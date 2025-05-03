@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3je4x3e3smcy"
-path="res://.godot/imported/portugal.png-141ef0b231388fa7074c324cbdff2739.ctex"
+path="res://.godot/imported/portugal.png-2cf73c6b52953c3dcd5bdc3b0e22eedc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/banderas/portugal.png"
-dest_files=["res://.godot/imported/portugal.png-141ef0b231388fa7074c324cbdff2739.ctex"]
+source_file="res://imagen/fixture/banderas/portugal.png"
+dest_files=["res://.godot/imported/portugal.png-2cf73c6b52953c3dcd5bdc3b0e22eedc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3ih8y10bxq0"
-path="res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"
+uid="uid://b71f04vmtr8q"
+path="res://.godot/imported/perderVida.png-44bd22c1a0ea0dcad7ff65b036ffa789.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/fixture/banderas/italy.png"
-dest_files=["res://.godot/imported/italy.png-8cc4c729c49c4b786a8908130f24d57e.ctex"]
+source_file="res://imagen/TUTORIAL/perderVida.png"
+dest_files=["res://.godot/imported/perderVida.png-44bd22c1a0ea0dcad7ff65b036ffa789.ctex"]
 
 [params]
 

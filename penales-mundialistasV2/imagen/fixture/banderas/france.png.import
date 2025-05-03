@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2fro4412pxer"
-path="res://.godot/imported/france.png-c2a356f2c493d058d1ab62f46dc02641.ctex"
+path="res://.godot/imported/france.png-2916b097553fc2ec05f41c082f4b100d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/banderas/france.png"
-dest_files=["res://.godot/imported/france.png-c2a356f2c493d058d1ab62f46dc02641.ctex"]
+source_file="res://imagen/fixture/banderas/france.png"
+dest_files=["res://.godot/imported/france.png-2916b097553fc2ec05f41c082f4b100d.ctex"]
 
 [params]
 

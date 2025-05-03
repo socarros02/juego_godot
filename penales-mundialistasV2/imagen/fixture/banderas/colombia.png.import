@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cji3whbd1ivyd"
-path="res://.godot/imported/colombia.png-3f22f7b75bb4dac0c4848ec298e83c57.ctex"
+path="res://.godot/imported/colombia.png-51f9125a6d8e2b1290e2766ac42878c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/banderas/colombia.png"
-dest_files=["res://.godot/imported/colombia.png-3f22f7b75bb4dac0c4848ec298e83c57.ctex"]
+source_file="res://imagen/fixture/banderas/colombia.png"
+dest_files=["res://.godot/imported/colombia.png-51f9125a6d8e2b1290e2766ac42878c2.ctex"]
 
 [params]
 

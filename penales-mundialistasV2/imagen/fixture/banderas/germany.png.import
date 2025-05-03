@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chl41ojgxhefy"
-path="res://.godot/imported/germany.png-75b0edd9929f03c9dec47b279586631c.ctex"
+path="res://.godot/imported/germany.png-753139d1b7c7a15dddc547c95b2d9c9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagen/banderas/germany.png"
-dest_files=["res://.godot/imported/germany.png-75b0edd9929f03c9dec47b279586631c.ctex"]
+source_file="res://imagen/fixture/banderas/germany.png"
+dest_files=["res://.godot/imported/germany.png-753139d1b7c7a15dddc547c95b2d9c9b.ctex"]
 
 [params]
 
