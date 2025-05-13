@@ -1,10 +1,17 @@
 extends Node2D
 
 @onready var mostrarPuntos: Label = $mostrarPuntos
+@onready var pausaPotencia = $potencia
+
+var is_paused = false
+
 var valor_actual
 func _process(delta):
+	if is_paused:
+		return
+		
 	if $potencia.value < $potencia.max_value:
-		$potencia.value += 50 * delta
+		$potencia.value += 250 * delta
 		valor_actual=$potencia.value
 	if $potencia.value == 100:
 		$potencia.value=$potencia.min_value
@@ -171,6 +178,7 @@ func _on_timer_timeout() -> void:
 	$arqueroMovDer.visible=false
 	$gol.stop()
 	$abucheos.stop()
+	is_paused=false
 
 func ACTIVAR_GOL(pat,gol):
 	$animacion.visible=true
@@ -179,6 +187,7 @@ func ACTIVAR_GOL(pat,gol):
 		opciones[i].disabled=true
 	$gol.play()	
 	moverArquero(pat,gol)
+	is_paused=true
 	$Timer.start()
 	
 func penalAtajado(pat,gol):
@@ -188,6 +197,7 @@ func penalAtajado(pat,gol):
 		opciones[i].disabled=true
 	$abucheos.play(1.0)
 	moverArquero(pat,gol)
+	is_paused=true
 	$Timer.start()
 
 func moverArquero(tiro,gol):
