@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckgj6t8n3a42n"]
+[gd_scene load_steps=17 format=3 uid="uid://ckgj6t8n3a42n"]
 
 [ext_resource type="Script" uid="uid://ckfq00pgafqx1" path="res://scripts/arcade.gd" id="1_658re"]
 [ext_resource type="Texture2D" uid="uid://ctwngasyghpxc" path="res://imagen/fondos/fondo.png" id="2_vsgju"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ctky4vdn0jp7m" path="res://imagen/animaciones/GOL.png" id="3_llor7"]
 [ext_resource type="Texture2D" uid="uid://cah2rdw5rg5eq" path="res://imagen/animaciones/ATAJO.png" id="4_8fmsq"]
 [ext_resource type="Texture2D" uid="uid://cd5svl7s0u2ds" path="res://imagen/assets/arqueroEstatico.png" id="5_e40hc"]
+[ext_resource type="Texture2D" uid="uid://dy88oseuy42ca" path="res://imagen/assets/corazon.png" id="5_llor7"]
 [ext_resource type="Texture2D" uid="uid://hfgeuicb0ix1" path="res://imagen/assets/arquero3.png" id="6_0ycwg"]
 [ext_resource type="AudioStream" uid="uid://bfnqho1rknq84" path="res://imagen/animaciones/Abucheos - (audio).mp3" id="8_76ty5"]
 [ext_resource type="AudioStream" uid="uid://b3v76fyab2vym" path="res://imagen/animaciones/Grito de Gol - Hinchada. (Audio).mp3" id="9_8cw3h"]
@@ -106,20 +107,30 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 
 [node name="vidas" type="GridContainer" parent="."]
-offset_left = 1012.0
-offset_top = 24.0
-offset_right = 1128.0
-offset_bottom = 57.0
+visible = false
+offset_left = 810.0
+offset_top = 33.0
+offset_right = 1118.0
+offset_bottom = 108.0
 columns = 3
 
 [node name="corazon1" type="TextureRect" parent="vidas"]
+custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
+texture = ExtResource("5_llor7")
+expand_mode = 1
 
 [node name="corazon2" type="TextureRect" parent="vidas"]
+custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
+texture = ExtResource("5_llor7")
+expand_mode = 1
 
 [node name="corazon3" type="TextureRect" parent="vidas"]
+custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
+texture = ExtResource("5_llor7")
+expand_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5

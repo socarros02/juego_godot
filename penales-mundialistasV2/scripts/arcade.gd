@@ -3,6 +3,18 @@ extends Node2D
 @onready var mostrarPuntos: Label = $mostrarPuntos
 @onready var pausaPotencia = $potencia
 
+func activarBotones():
+	var opciones=[$GridContainer/arribaIzquierda,$GridContainer/arribaMedio,$GridContainer/arribaDerecha,$GridContainer/abajoIzquierda,$GridContainer/abajoMedio,$GridContainer/abajoDeecha]
+	for i in range(6):
+		opciones[i].disabled=false
+
+
+func desactivarBotones():
+	var opciones=[$GridContainer/arribaIzquierda,$GridContainer/arribaMedio,$GridContainer/arribaDerecha,$GridContainer/abajoIzquierda,$GridContainer/abajoMedio,$GridContainer/abajoDeecha]
+	for i in range(6):
+		opciones[i].disabled=true
+
+
 var is_paused = false
 
 var valor_actual
@@ -20,7 +32,8 @@ func _process(delta):
 
 var tuto=0
 
-##var valor_actual = $potencia.value
+func _ready() -> void:
+	desactivarBotones()
 
 func _on_siguiente_pressed() -> void:
 	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
@@ -34,6 +47,8 @@ func _on_siguiente_pressed() -> void:
 		$siguiente.visible=false
 		$omitir.visible=false
 		$potencia.visible=true
+		$vidas.visible=true
+		activarBotones()
 	
 func _on_omitir_pressed() -> void:
 	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
@@ -44,6 +59,8 @@ func _on_omitir_pressed() -> void:
 	$siguiente.visible=false
 	$omitir.visible=false
 	$potencia.visible=true
+	$vidas.visible=true
+	activarBotones()
 	
 
 var contador=0
@@ -112,15 +129,12 @@ func tiro(pat,potencia):
 		faseActual=fase(contador,faseActual)
 		contador=contadorFunc(contador)
 		_on_mostrarPuntaje(puntosActuales)
-		print("gol!!!|puntos:%d|fase %d|"%[puntosActuales,faseActual])
 		ACTIVAR_GOL(pat,gol)
 		
 	else:
-		print("atajo el aquero|puntos:%d|fase %d|"%[puntosActuales,faseActual])
+		Global.puntosActuales=puntosActuales
 		vidas = vidas -1
 		penalAtajado(pat,gol)
-		if vidas<0:
-			get_tree().change_scene_to_file("res://Escenas/menu.tscn")
 		
 	
 func _on_mostrarPuntaje(puntos):
@@ -179,6 +193,8 @@ func _on_timer_timeout() -> void:
 	$gol.stop()
 	$abucheos.stop()
 	is_paused=false
+	if vidas<0:
+			get_tree().change_scene_to_file("res://Escenas/perdiste_arcade.tscn")
 
 func ACTIVAR_GOL(pat,gol):
 	$animacion.visible=true

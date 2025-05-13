@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://choip8kcdfusa"]
+
+[ext_resource type="Script" uid="uid://bol8i28cs6d0g" path="res://scripts/perdiste_arcade.gd" id="1_xn4ix"]
+[ext_resource type="Texture2D" uid="uid://b4tmg6ayxv7o" path="res://imagen/fondos/estadio.jpg" id="2_sik3p"]
+[ext_resource type="Texture2D" uid="uid://bycdvo5vfon35" path="res://imagen/fondos/game over.png" id="3_nanba"]
+[ext_resource type="Texture2D" uid="uid://c80wahurdi7jd" path="res://imagen/assets/volverAlMenu.png" id="4_sik3p"]
+
+[node name="perdisteArcade" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xn4ix")
+
+[node name="fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1283.0
+offset_bottom = 719.0
+texture = ExtResource("2_sik3p")
+expand_mode = 1
+
+[node name="gameOver" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 136.0
+offset_right = 1005.0
+offset_bottom = 474.0
+texture = ExtResource("3_nanba")
+expand_mode = 1
+
+[node name="puntos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 471.0
+offset_right = 763.0
+offset_bottom = 531.0
+horizontal_alignment = 1
+
+[node name="volver al menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 563.0
+offset_right = 776.0
+offset_bottom = 704.0
+icon = ExtResource("4_sik3p")
+
+[connection signal="pressed" from="volver al menu" to="." method="_on_volver_al_menu_pressed"]
