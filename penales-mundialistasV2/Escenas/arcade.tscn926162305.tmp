@@ -13,12 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://dmvd5yq0wlmmb" path="res://imagen/TUTORIAL/comoPatear.png" id="12_8fmsq"]
 [ext_resource type="Texture2D" uid="uid://dflaukyyauwqg" path="res://imagen/TUTORIAL/golPuntos.png" id="13_e40hc"]
 [ext_resource type="Texture2D" uid="uid://b71f04vmtr8q" path="res://imagen/TUTORIAL/perderVida.png" id="14_0ycwg"]
+[ext_resource type="Script" uid="uid://p3dan3qwiry1" path="res://Escenas/potencia.gd" id="14_llor7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jfan"]
 font_size = 40
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsgju"]
 
 [node name="arcade" type="Node2D"]
 script = ExtResource("1_658re")
@@ -185,12 +184,15 @@ offset_bottom = 615.0
 text = "SIGUIENTE"
 
 [node name="potencia" type="ProgressBar" parent="."]
-visible = false
 offset_left = 423.0
 offset_top = 616.0
 offset_right = 675.0
 offset_bottom = 643.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_vsgju")
+script = ExtResource("14_llor7")
+
+[node name="tiempoPotencia" type="Timer" parent="potencia"]
+wait_time = 0.1
+autostart = true
 
 [connection signal="pressed" from="GridContainer/arribaIzquierda" to="." method="_on_arriba_izquierda_pressed"]
 [connection signal="pressed" from="GridContainer/arribaMedio" to="." method="_on_arriba_medio_pressed"]

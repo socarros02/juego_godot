@@ -1,6 +1,19 @@
 extends Node2D
+
 @onready var mostrarPuntos: Label = $mostrarPuntos
+var valor_actual
+func _process(delta):
+	if $potencia.value < $potencia.max_value:
+		$potencia.value += 50 * delta
+		valor_actual=$potencia.value
+	if $potencia.value == 100:
+		$potencia.value=$potencia.min_value
+	actualizar_color_barra()
+	
+
 var tuto=0
+
+##var valor_actual = $potencia.value
 
 func _on_siguiente_pressed() -> void:
 	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
@@ -13,7 +26,7 @@ func _on_siguiente_pressed() -> void:
 		$omitir.disabled=false
 		$siguiente.visible=false
 		$omitir.visible=false
-		
+		$potencia.visible=true
 	
 func _on_omitir_pressed() -> void:
 	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
@@ -23,6 +36,8 @@ func _on_omitir_pressed() -> void:
 	$omitir.disabled=false
 	$siguiente.visible=false
 	$omitir.visible=false
+	$potencia.visible=true
+	
 
 var contador=0
 
@@ -47,34 +62,34 @@ var abajoDer=Vector2(784, 416)
 
 
 var puntoPenal= Vector2(547, 557)
+
 const faseMaxima=4
 
 func _on_arriba_izquierda_pressed() -> void:
 	moverPelota(0)
-	tiro(1)
+	tiro(1,valor_actual)
 	
 func _on_arriba_medio_pressed() -> void:
 	moverPelota(1)
-	tiro(2)
+	tiro(2,valor_actual)
 
 func _on_arriba_derecha_pressed() -> void:
 	moverPelota(2)
-	tiro(3)
+	tiro(3,valor_actual)
 
 func _on_abajo_izquierda_pressed() -> void:
 	moverPelota(3)
-	tiro(4)
+	tiro(4,valor_actual)
 
 func _on_abajo_medio_pressed() -> void:
 	moverPelota(4)
-	tiro(5)
+	tiro(5,valor_actual)
 
 func _on_abajo_deecha_pressed() -> void:
 	moverPelota(5)
-	tiro(6)
+	tiro(6,valor_actual)
 
 func moverPelota(lugar):
-	var posicion=lugar
 	var opciones=[$GridContainer/arribaIzquierda,$GridContainer/arribaMedio,$GridContainer/arribaDerecha,$GridContainer/abajoIzquierda,$GridContainer/abajoMedio,$GridContainer/abajoDeecha]
 	var ball = $ball
 	var button = opciones[lugar]
@@ -82,9 +97,9 @@ func moverPelota(lugar):
 	var tween = get_tree().create_tween()
 	tween.tween_property(ball, "global_position", button_center, 0.2)
 
-func tiro(pat):
+func tiro(pat,potencia):
 	var gol
-	gol = ataja(pat,faseActual,vidas)
+	gol = ataja(pat,faseActual,vidas,potencia)
 	if gol==1:
 		puntosActuales=puntos(faseActual,puntosActuales)
 		faseActual=fase(contador,faseActual)
@@ -122,18 +137,25 @@ func puntos(fase,puntos):
 	puntaje=fase*15+puntaje
 	return puntaje
 
-func ataja(tiro,fase,vida):
+func ataja(tiro,fase,vida,potencia):
 	var gol
 	var opciones =[1,2,3,4,5,6]
 	var vidas=[$vidas/corazon3,$vidas/corazon2,$vidas/corazon1]
 	opciones.shuffle()
+	fase = fase + 1
+	if potencia< 30:
+		fase = fase+1
+	elif potencia>75:
+		fase = fase - 1
+
 	for i in range(fase):
-			if tiro == opciones[i]:
-				gol=0
-				vidas[vida].visible=false
-				break
-			else:
-				gol=1
+		print(opciones[i])
+		if tiro == opciones[i]:
+			gol=0
+			vidas[vida].visible=false
+			break
+		else:
+			gol=1
 	return gol
 
 
@@ -181,3 +203,14 @@ func moverArquero(tiro,gol):
 	$arqueroMovDer.visible=true
 	$arqueroMovDer.position=mover[tiro]
 			
+func actualizar_color_barra():
+	var percent = $potencia.value / $potencia.max_value  
+	var color:Color
+	if percent < 0.5:
+		color = Color(1,percent*2,0)
+	else:
+		color= Color(1-(percent-0.5)*2,1,0)
+	
+	var style = $potencia.get("theme_override_styles/fill")
+	if style:
+		style.bg_color=color
