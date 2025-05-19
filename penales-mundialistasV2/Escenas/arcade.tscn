@@ -32,9 +32,9 @@ offset_right = 1151.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 8
 texture = ExtResource("2_vsgju")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="animacion" type="TextureRect" parent="."]
 visible = false
@@ -197,11 +197,13 @@ text = "SIGUIENTE"
 
 [node name="potencia" type="ProgressBar" parent="."]
 visible = false
-offset_left = 423.0
-offset_top = 616.0
-offset_right = 675.0
-offset_bottom = 643.0
+offset_left = 125.0
+offset_top = 187.0
+offset_right = 161.0
+offset_bottom = 485.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_vsgju")
+fill_mode = 3
+show_percentage = false
 
 [connection signal="pressed" from="GridContainer/arribaIzquierda" to="." method="_on_arriba_izquierda_pressed"]
 [connection signal="pressed" from="GridContainer/arribaMedio" to="." method="_on_arriba_medio_pressed"]

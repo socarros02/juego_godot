@@ -105,6 +105,7 @@ offset_bottom = 561.0
 text = "CONTINUAR"
 
 [node name="penales" type="TextureRect" parent="."]
+visible = false
 offset_right = 1151.0
 offset_bottom = 648.0
 texture = ExtResource("10_cqrll")

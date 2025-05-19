@@ -23,7 +23,7 @@ func _process(delta):
 		return
 		
 	if $potencia.value < $potencia.max_value:
-		$potencia.value += 250 * delta
+		$potencia.value += 75* faseActual * delta
 		valor_actual=$potencia.value
 	if $potencia.value == 100:
 		$potencia.value=$potencia.min_value
@@ -33,6 +33,7 @@ func _process(delta):
 var tuto=0
 
 func _ready() -> void:
+	
 	desactivarBotones()
 
 func _on_siguiente_pressed() -> void:
@@ -159,7 +160,7 @@ func puntos(fase,puntos):
 	return puntaje
 
 func ataja(tiro,fase,vida,potencia):
-	var gol
+	var gol=1
 	var opciones =[1,2,3,4,5,6]
 	var vidas=[$vidas/corazon3,$vidas/corazon2,$vidas/corazon1]
 	opciones.shuffle()
@@ -174,9 +175,6 @@ func ataja(tiro,fase,vida,potencia):
 		if tiro == opciones[i]:
 			gol=0
 			vidas[vida].visible=false
-			break
-		else:
-			gol=1
 	return gol
 
 
@@ -190,6 +188,7 @@ func _on_timer_timeout() -> void:
 	$ball.global_position=puntoPenal
 	$arqueroEstatico.visible=true
 	$arqueroMovDer.visible=false
+	$arqueroMovDer.flip_h=false
 	$gol.stop()
 	$abucheos.stop()
 	is_paused=false
@@ -225,7 +224,8 @@ func moverArquero(tiro,gol):
 		tiro=tiro-2
 		if tiro<0:
 			tiro=tiro+4
-		
+	if tiro == 0 or tiro == 3:
+		$arqueroMovDer.flip_h=true
 	$arqueroMovDer.visible=true
 	$arqueroMovDer.position=mover[tiro]
 			
