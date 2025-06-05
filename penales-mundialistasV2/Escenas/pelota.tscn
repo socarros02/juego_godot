@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciouk1j5vc66a"]
+
+[ext_resource type="Script" uid="uid://c3be8n4d7ouus" path="res://scripts/pelota.gd" id="1_0okw3"]
+[ext_resource type="Texture2D" uid="uid://csqwttjca3scs" path="res://imagen/assets/SoccerBall.png" id="2_p7cd6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wg3ct"]
+radius = 50.01
+
+[node name="pelota" type="Node2D"]
+position = Vector2(1390, 297)
+script = ExtResource("1_0okw3")
+
+[node name="cabeceada" type="Area2D" parent="."]
+position = Vector2(-57, -18)
+
+[node name="spritePelota" type="Sprite2D" parent="cabeceada"]
+position = Vector2(70, 44)
+texture = ExtResource("2_p7cd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cabeceada"]
+position = Vector2(70, 44)
+shape = SubResource("CircleShape2D_wg3ct")
+
+[connection signal="body_entered" from="cabeceada" to="." method="_on_cabeceada_body_entered"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpy5i6llapd5k"]
+
+[ext_resource type="Texture2D" uid="uid://b8t1x1hrjcrvw" path="res://imagen/fondos/fondoVan.jpg" id="1_1ci2s"]
+[ext_resource type="Script" uid="uid://irmh8fofy7l7" path="res://scripts/van_persie.gd" id="2_gpfox"]
+[ext_resource type="Texture2D" uid="uid://c8xxhklscjse4" path="res://imagen/assets/cabeza-removebg-preview.png" id="2_w6dl0"]
+[ext_resource type="Script" uid="uid://b2ibe1nt8q0nr" path="res://scripts/spawn_pelotas.gd" id="4_4jdel"]
+[ext_resource type="PackedScene" uid="uid://ciouk1j5vc66a" path="res://Escenas/pelota.tscn" id="4_gpfox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpfox"]
+size = Vector2(1168, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kapys"]
+size = Vector2(126.5, 80.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jdel"]
+size = Vector2(20, 656)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fondo" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1149.0
+offset_bottom = 648.0
+texture = ExtResource("1_1ci2s")
+expand_mode = 1
+
+[node name="piso" type="StaticBody2D" parent="."]
+position = Vector2(-4, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso"]
+position = Vector2(574, 0)
+shape = SubResource("RectangleShape2D_gpfox")
+
+[node name="vanPersie" type="RigidBody2D" parent="."]
+position = Vector2(259, 233)
+script = ExtResource("2_gpfox")
+
+[node name="imgVan" type="Sprite2D" parent="vanPersie"]
+position = Vector2(145, 102)
+rotation = 0.39619
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_w6dl0")
+flip_h = true
+
+[node name="cabeza" type="CollisionShape2D" parent="vanPersie"]
+position = Vector2(124, 104)
+shape = SubResource("RectangleShape2D_kapys")
+
+[node name="spawnPelotas" type="Node2D" parent="."]
+script = ExtResource("4_4jdel")
+
+[node name="puntaje" type="Label" parent="spawnPelotas"]
+offset_left = 101.0
+offset_top = 37.0
+offset_right = 141.0
+offset_bottom = 60.0
+text = "000"
+
+[node name="pelota" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1470, 84)
+
+[node name="pelota2" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1468, 341)
+
+[node name="pelota3" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1422, 212)
+
+[node name="pelota4" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1600, 90)
+
+[node name="pelota5" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1456, 490)
+
+[node name="pelota6" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
+position = Vector2(1526, 250)
+
+[node name="spawn1" type="Marker2D" parent="spawnPelotas"]
+position = Vector2(1618, 237)
+
+[node name="spawn2" type="Marker2D" parent="spawnPelotas"]
+position = Vector2(1622, 376)
+
+[node name="spawn3" type="Marker2D" parent="spawnPelotas"]
+position = Vector2(1625, 510)
+
+[node name="spawn4" type="Marker2D" parent="spawnPelotas"]
+position = Vector2(1622, 89)
+
+[node name="Timer" type="Timer" parent="spawnPelotas"]
+wait_time = 3.0
+autostart = true
+
+[node name="final" type="Area2D" parent="."]
+position = Vector2(54, 1)
+
+[node name="perdiste" type="CollisionShape2D" parent="final"]
+position = Vector2(45, 322)
+shape = SubResource("RectangleShape2D_4jdel")
+
+[connection signal="timeout" from="spawnPelotas/Timer" to="spawnPelotas" method="_on_timer_timeout"]
