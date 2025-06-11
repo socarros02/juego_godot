@@ -12,11 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ouk20")
 
-[node name="Container" type="Container" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -43,16 +38,11 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "MODO ARCADE"
+text = "Penales de la muerte"
 
 [node name="Button2" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "MODO MUNDIALISTA"
-
-[node name="Button3" type="Button" parent="GridContainer"]
-layout_mode = 2
-text = "INFORMACION"
+text = "Palomita Van Persie"
 
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]

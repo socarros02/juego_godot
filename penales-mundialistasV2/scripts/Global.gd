@@ -1,6 +1,6 @@
 extends Node
 var faseActual
-var puntosActuales
+var puntosActuales=0
 var potencia
 var vidas
-var puntoPalomita
+var puntoPalomita = 0

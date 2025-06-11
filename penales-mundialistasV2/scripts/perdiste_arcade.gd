@@ -6,8 +6,6 @@ func _ready() -> void:
 
 func _on_mostrarPuntaje():
 	mostrarPuntos.text= "Puntuacion total %03d" % Global.puntosActuales
-
-
 func _on_volver_al_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenas/menu.tscn")
 	

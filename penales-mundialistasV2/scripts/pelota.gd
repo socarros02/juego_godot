@@ -2,7 +2,7 @@ extends Node2D
 
 signal pelota_cabeceada
 signal restarVida
-
+var puntaje= Global.puntoPalomita
 var velocidad = 15
 var activa = false
 
@@ -15,7 +15,8 @@ func _on_cabeceada_body_entered(body: Node2D) -> void:
 		emit_signal("pelota_cabeceada")
 		$cabeceada.global_position=Vector2(1600,200)
 		_reset()
-	else:
+	
+	if body.name=="final":
 		emit_signal("restarVida")
 		$cabeceada.global_position=Vector2(1600,200)
 		_reset()

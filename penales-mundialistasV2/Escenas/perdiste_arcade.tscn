@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://choip8kcdfusa"]
+[gd_scene load_steps=4 format=3 uid="uid://choip8kcdfusa"]
 
 [ext_resource type="Script" uid="uid://bol8i28cs6d0g" path="res://scripts/perdiste_arcade.gd" id="1_xn4ix"]
-[ext_resource type="Texture2D" uid="uid://b4tmg6ayxv7o" path="res://imagen/fondos/estadio.jpg" id="2_sik3p"]
-[ext_resource type="Texture2D" uid="uid://bycdvo5vfon35" path="res://imagen/fondos/game over.png" id="3_nanba"]
+[ext_resource type="Texture2D" uid="uid://by8siern5vxps" path="res://imagen/assets/dd87ad0c-202f-49a8-82c1-d4a9b20e49c5.png" id="2_xn4ix"]
 [ext_resource type="Texture2D" uid="uid://c80wahurdi7jd" path="res://imagen/assets/volverAlMenu.png" id="4_sik3p"]
 
 [node name="perdisteArcade" type="Control"]
@@ -14,21 +13,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xn4ix")
 
-[node name="fondo" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(1151, 648)
-layout_mode = 0
-offset_right = 1148.0
-offset_bottom = 652.0
-texture = ExtResource("2_sik3p")
-expand_mode = 1
-
 [node name="gameOver" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 232.0
-offset_top = 42.0
-offset_right = 922.0
-offset_bottom = 380.0
-texture = ExtResource("3_nanba")
+offset_top = -34.0
+offset_right = 1178.0
+offset_bottom = 728.0
+texture = ExtResource("2_xn4ix")
 expand_mode = 1
 
 [node name="puntos" type="Label" parent="."]
@@ -37,6 +27,7 @@ offset_left = 490.0
 offset_top = 384.0
 offset_right = 680.0
 offset_bottom = 444.0
+text = "000"
 horizontal_alignment = 1
 
 [node name="volver al menu" type="Button" parent="."]

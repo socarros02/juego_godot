@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj28v66v45605"]
+
+[ext_resource type="Script" uid="uid://datnfhv4t00vi" path="res://scripts/perdiste_palomita.gd" id="1_f7pj7"]
+[ext_resource type="Texture2D" uid="uid://by8siern5vxps" path="res://imagen/assets/dd87ad0c-202f-49a8-82c1-d4a9b20e49c5.png" id="2_5l5qi"]
+[ext_resource type="Texture2D" uid="uid://c80wahurdi7jd" path="res://imagen/assets/volverAlMenu.png" id="4_wsito"]
+
+[node name="PerdistePalomita" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7pj7")
+
+[node name="gameOver" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -34.0
+offset_right = 1178.0
+offset_bottom = 728.0
+texture = ExtResource("2_5l5qi")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 398.0
+offset_right = 680.0
+offset_bottom = 458.0
+text = "000"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 501.0
+offset_right = 695.0
+offset_bottom = 642.0
+icon = ExtResource("4_wsito")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
