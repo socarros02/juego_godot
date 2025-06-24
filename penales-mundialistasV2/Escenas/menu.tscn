@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8eet02hutawi"]
+[gd_scene load_steps=7 format=3 uid="uid://b8eet02hutawi"]
 
 [ext_resource type="Script" uid="uid://bi4t4tr6icowt" path="res://scripts/menu.gd" id="1_ouk20"]
 [ext_resource type="Texture2D" uid="uid://b4tmg6ayxv7o" path="res://imagen/fondos/estadio.jpg" id="2_p25xy"]
+[ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="3_17m5t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
+bg_color = Color(0.168627, 0.686275, 0.215686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0.701961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8bcg"]
+bg_color = Color(0.701961, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,7 +40,7 @@ grow_vertical = 2
 texture = ExtResource("2_p25xy")
 expand_mode = 1
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="modo de juego" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,13 +54,25 @@ offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="GridContainer"]
+[node name="Button" type="Button" parent="modo de juego"]
 layout_mode = 2
-text = "Penales de la muerte"
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_17m5t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
+text = "PENALES ARCADE ⚽🕹️"
 
-[node name="Button2" type="Button" parent="GridContainer"]
+[node name="Button2" type="Button" parent="modo de juego"]
 layout_mode = 2
-text = "Palomita Van Persie"
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_17m5t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
+text = " PALOMITA VAN PERSIE ⚽🕊️ "
 
-[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="modo de juego/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="modo de juego/Button2" to="." method="_on_button_2_pressed"]

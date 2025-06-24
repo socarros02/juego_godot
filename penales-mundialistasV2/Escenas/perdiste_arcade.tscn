@@ -1,8 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://choip8kcdfusa"]
+[gd_scene load_steps=8 format=3 uid="uid://choip8kcdfusa"]
 
 [ext_resource type="Script" uid="uid://bol8i28cs6d0g" path="res://scripts/perdiste_arcade.gd" id="1_xn4ix"]
+[ext_resource type="Texture2D" uid="uid://b8t1x1hrjcrvw" path="res://imagen/fondos/fondoVan.jpg" id="2_sik3p"]
 [ext_resource type="Texture2D" uid="uid://by8siern5vxps" path="res://imagen/assets/dd87ad0c-202f-49a8-82c1-d4a9b20e49c5.png" id="2_xn4ix"]
-[ext_resource type="Texture2D" uid="uid://c80wahurdi7jd" path="res://imagen/assets/volverAlMenu.png" id="4_sik3p"]
+[ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="4_nanba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
+bg_color = Color(0.168627, 0.686275, 0.215686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0.701961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8bcg"]
+bg_color = Color(0.701961, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="perdisteArcade" type="Control"]
 layout_mode = 3
@@ -13,29 +31,71 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xn4ix")
 
+[node name="FONDO" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sik3p")
+expand_mode = 1
+
 [node name="gameOver" type="TextureRect" parent="."]
-layout_mode = 0
-offset_top = -34.0
-offset_right = 1178.0
-offset_bottom = 728.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = -269.0
+offset_right = 243.5
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_xn4ix")
 expand_mode = 1
 
 [node name="puntos" type="Label" parent="."]
-layout_mode = 0
-offset_left = 490.0
-offset_top = 384.0
-offset_right = 680.0
-offset_bottom = 444.0
-text = "000"
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.5
+offset_top = 90.5
+offset_right = 329.5
+offset_bottom = 161.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.701961, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_nanba")
+theme_override_font_sizes/font_size = 50
+text = "PUNTUACION TOTAL 000"
 horizontal_alignment = 1
 
 [node name="volver al menu" type="Button" parent="."]
-layout_mode = 0
-offset_left = 469.0
-offset_top = 501.0
-offset_right = 695.0
-offset_bottom = 642.0
-icon = ExtResource("4_sik3p")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.5
+offset_top = -147.0
+offset_right = 125.5
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_nanba")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
+text = "REGRESAR AL 
+MENU"
 
 [connection signal="pressed" from="volver al menu" to="." method="_on_volver_al_menu_pressed"]
