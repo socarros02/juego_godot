@@ -13,7 +13,10 @@ func _physics_process(delta: float) -> void:
 		linear_velocity=Vector2.ZERO
 		Global.vidas=0
 		$muerte.start()
-		
+func _ready() -> void:
+	var menu= get_parent().get_node("spawnPelotas/MenuButton")
+	menu.get_popup().id_pressed.connect(_on_menu_option_selected)
+	
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if not vida:
 		return	
@@ -22,3 +25,16 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 func _on_muerte_timeout() -> void:
 	die()
+
+
+func _on_menu_button_pressed() -> void:
+	velocidad = 0
+	gravity_scale=0
+
+func _on_menu_option_selected(id):
+	match id:
+		0:
+			velocidad=350
+			gravity_scale=1
+		1:
+			get_tree().change_scene_to_file("res://Escenas/menu.tscn")

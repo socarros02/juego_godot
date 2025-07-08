@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckgj6t8n3a42n"]
+[gd_scene load_steps=21 format=3 uid="uid://ckgj6t8n3a42n"]
 
 [ext_resource type="Script" uid="uid://ckfq00pgafqx1" path="res://scripts/arcade.gd" id="1_658re"]
 [ext_resource type="Texture2D" uid="uid://ctwngasyghpxc" path="res://imagen/fondos/fondo.png" id="2_vsgju"]
@@ -14,12 +14,34 @@
 [ext_resource type="Texture2D" uid="uid://dmvd5yq0wlmmb" path="res://imagen/TUTORIAL/comoPatear.png" id="12_8fmsq"]
 [ext_resource type="Texture2D" uid="uid://dflaukyyauwqg" path="res://imagen/TUTORIAL/golPuntos.png" id="13_e40hc"]
 [ext_resource type="Texture2D" uid="uid://b71f04vmtr8q" path="res://imagen/TUTORIAL/perderVida.png" id="14_0ycwg"]
+[ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="15_8fmsq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jfan"]
 font_size = 40
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsgju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avvay"]
+bg_color = Color(0.447059, 0.756863, 0.0235294, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwhsn"]
+bg_color = Color(0.196078, 0.694118, 0.356863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxwuo"]
+bg_color = Color(0.55793, 0.0977347, 0.105389, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="arcade" type="Node2D"]
 script = ExtResource("1_658re")
@@ -205,6 +227,27 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_vsgju")
 fill_mode = 3
 show_percentage = false
 
+[node name="MenuButton" type="MenuButton" parent="."]
+visible = false
+offset_left = 134.0
+offset_top = 17.0
+offset_right = 235.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("15_8fmsq")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_avvay")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mwhsn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wxwuo")
+text = "PAUSA"
+flat = false
+switch_on_hover = true
+item_count = 2
+popup/item_0/text = "SEGUIR JUGANDO"
+popup/item_0/id = 0
+popup/item_1/text = "VOLVER AL MENU"
+popup/item_1/id = 1
+
 [connection signal="pressed" from="GridContainer/arribaIzquierda" to="." method="_on_arriba_izquierda_pressed"]
 [connection signal="pressed" from="GridContainer/arribaMedio" to="." method="_on_arriba_medio_pressed"]
 [connection signal="pressed" from="GridContainer/arribaDerecha" to="." method="_on_arriba_derecha_pressed"]
@@ -214,3 +257,4 @@ show_percentage = false
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="omitir" to="." method="_on_omitir_pressed"]
 [connection signal="pressed" from="siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

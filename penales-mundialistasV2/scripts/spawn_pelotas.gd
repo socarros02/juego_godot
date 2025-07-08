@@ -15,7 +15,8 @@ var vida=3
 @onready var mostrarPuntos: Label = $puntaje
 
 func _ready():
-	
+	var popup = $MenuButton.get_popup()
+	popup.id_pressed.connect(_on_menu_option_selected)
 	for pelota in pelotas:
 		if pelota:
 			pelota.connect("pelota_cabeceada", Callable(self, "_on_pelota_cabeceada"))
@@ -53,3 +54,12 @@ func _on_timer_timeout() -> void:
 
 func _on_muerte_timeout() -> void:
 	get_tree().change_scene_to_file("res://Escenas/perdistePalomita.tscn")
+
+
+func _on_menu_button_pressed() -> void:
+	$Timer.stop()
+func _on_menu_option_selected(id):
+	match id:
+		0:
+			$Timer.start()
+		

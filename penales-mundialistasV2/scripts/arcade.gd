@@ -33,6 +33,8 @@ var tuto=0
 
 func _ready() -> void:
 	desactivarBotones()
+	var menu= $MenuButton
+	menu.get_popup().id_pressed.connect(_on_menu_option_selected)
 
 
 ##pasar tutorial
@@ -51,6 +53,7 @@ func _on_siguiente_pressed() -> void:
 		$potencia.visible=true
 		$vidas.visible=true
 		activarBotones()
+		$MenuButton.visible=true
 func _on_omitir_pressed() -> void:
 	var tutorial=[$objetivo,$comoJugar,$ganarPuntos,$perderPuntos]
 	for i in range(4):
@@ -62,6 +65,7 @@ func _on_omitir_pressed() -> void:
 	$potencia.visible=true
 	$vidas.visible=true
 	activarBotones()
+	$MenuButton.visible=true
 	
 
 var contador=0
@@ -169,10 +173,13 @@ func ataja(tiro,fase,vida,potencia):
 		fase = fase - 1
 
 	for i in range(fase):
-		print(opciones[i])
 		if tiro == opciones[i]:
 			gol=0
 			vidas[vida].visible=false
+	
+	if potencia>95:
+		gol=1
+	
 	return gol
 
 
@@ -220,10 +227,11 @@ func moverArquero(tiro,gol):
 
 	var mover=[arribaIzq,arribaMedio,arribaDerecha,abajoIzq,abajoMedio,abajoDer]
 	tiro =tiro-1
+	var tiroRandom = tiro
 	if gol==1:
-		tiro=tiro-2
-		if tiro<0:
-			tiro=tiro+4
+		while tiro == tiroRandom:
+			tiroRandom = randi() % 6
+	tiro = tiroRandom
 	if tiro == 0 or tiro == 3:
 		$arqueroMovDer.flip_h=true
 	$arqueroMovDer.visible=true
@@ -241,3 +249,16 @@ func actualizar_color_barra():
 	var style = $potencia.get("theme_override_styles/fill")
 	if style:
 		style.bg_color=color
+
+
+func _on_menu_button_pressed() -> void:
+	desactivarBotones()
+	is_paused=true
+
+func _on_menu_option_selected(id):
+	match id:
+		0:
+			activarBotones()
+			is_paused=false
+		1:
+			get_tree().change_scene_to_file("res://Escenas/menu.tscn")
