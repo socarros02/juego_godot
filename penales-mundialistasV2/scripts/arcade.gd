@@ -27,7 +27,9 @@ func _process(delta):
 	if $potencia.value == 100:
 		$potencia.value=$potencia.min_value
 	actualizar_color_barra()
-	
+	if Input.is_action_just_pressed("PAUSA"):
+		_on_menu_button_pressed()
+		$MenuButton.show_popup()
 
 var tuto=0
 
@@ -35,6 +37,7 @@ func _ready() -> void:
 	desactivarBotones()
 	var menu= $MenuButton
 	menu.get_popup().id_pressed.connect(_on_menu_option_selected)
+	
 
 
 ##pasar tutorial

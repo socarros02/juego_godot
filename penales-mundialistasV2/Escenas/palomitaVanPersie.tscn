@@ -87,30 +87,30 @@ expand_mode = 1
 script = ExtResource("4_4jdel")
 
 [node name="puntaje" type="Label" parent="spawnPelotas"]
-offset_left = 49.0
-offset_top = 16.0
-offset_right = 102.0
-offset_bottom = 57.0
+offset_left = 33.0
+offset_top = 12.0
+offset_right = 86.0
+offset_bottom = 53.0
 text = "000"
 label_settings = SubResource("LabelSettings_rruhc")
 
 [node name="pelota" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1470, 84)
+position = Vector2(1428, 68)
 
 [node name="pelota2" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1468, 341)
+position = Vector2(1298, 33)
 
 [node name="pelota3" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1422, 212)
+position = Vector2(1537, 27)
 
 [node name="pelota4" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1600, 90)
+position = Vector2(1651, 22)
 
 [node name="pelota5" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1456, 490)
+position = Vector2(1905, 36)
 
 [node name="pelota6" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
-position = Vector2(1526, 250)
+position = Vector2(1773, 24)
 
 [node name="spawn1" type="Marker2D" parent="spawnPelotas"]
 position = Vector2(1618, 237)
@@ -132,10 +132,10 @@ autostart = true
 
 [node name="gameOver" type="TextureRect" parent="spawnPelotas"]
 visible = false
-offset_left = 394.0
-offset_top = 225.0
-offset_right = 724.0
-offset_bottom = 484.0
+offset_left = 373.0
+offset_top = 183.0
+offset_right = 773.0
+offset_bottom = 489.0
 texture = ExtResource("6_wg3ct")
 expand_mode = 1
 
@@ -165,10 +165,10 @@ texture = ExtResource("6_kapys")
 expand_mode = 1
 
 [node name="MenuButton" type="MenuButton" parent="spawnPelotas"]
-offset_left = 134.0
-offset_top = 17.0
-offset_right = 235.0
-offset_bottom = 63.0
+offset_left = 151.0
+offset_top = 16.0
+offset_right = 252.0
+offset_bottom = 62.0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("6_avvay")
 theme_override_font_sizes/font_size = 26
