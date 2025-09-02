@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bpy5i6llapd5k"]
+[gd_scene load_steps=16 format=3 uid="uid://bpy5i6llapd5k"]
 
 [ext_resource type="Texture2D" uid="uid://b8t1x1hrjcrvw" path="res://imagen/fondos/fondoVan.jpg" id="1_1ci2s"]
 [ext_resource type="Script" uid="uid://irmh8fofy7l7" path="res://scripts/van_persie.gd" id="2_gpfox"]
@@ -40,6 +40,9 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avvay"]
+size = Vector2(1140, 41)
 
 [node name="Node2D" type="Node2D"]
 
@@ -112,18 +115,6 @@ position = Vector2(1905, 36)
 [node name="pelota6" parent="spawnPelotas" instance=ExtResource("4_gpfox")]
 position = Vector2(1773, 24)
 
-[node name="spawn1" type="Marker2D" parent="spawnPelotas"]
-position = Vector2(1618, 237)
-
-[node name="spawn2" type="Marker2D" parent="spawnPelotas"]
-position = Vector2(1622, 376)
-
-[node name="spawn3" type="Marker2D" parent="spawnPelotas"]
-position = Vector2(1625, 510)
-
-[node name="spawn4" type="Marker2D" parent="spawnPelotas"]
-position = Vector2(1622, 89)
-
 [node name="Timer" type="Timer" parent="spawnPelotas"]
 wait_time = 3.0
 autostart = true
@@ -165,10 +156,10 @@ texture = ExtResource("6_kapys")
 expand_mode = 1
 
 [node name="MenuButton" type="MenuButton" parent="spawnPelotas"]
-offset_left = 151.0
-offset_top = 16.0
-offset_right = 252.0
-offset_bottom = 62.0
+offset_left = 132.0
+offset_top = 12.0
+offset_right = 233.0
+offset_bottom = 54.0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("6_avvay")
 theme_override_font_sizes/font_size = 26
@@ -183,6 +174,13 @@ popup/item_0/text = "SEGUIR JUGANDO"
 popup/item_0/id = 0
 popup/item_1/text = "VOLVER AL MENU"
 popup/item_1/id = 1
+
+[node name="techo" type="StaticBody2D" parent="."]
+position = Vector2(14, -35)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="techo"]
+position = Vector2(561, 31)
+shape = SubResource("RectangleShape2D_avvay")
 
 [connection signal="body_entered" from="vanPersie" to="vanPersie" method="_on_body_entered"]
 [connection signal="timeout" from="vanPersie/muerte" to="vanPersie" method="_on_muerte_timeout"]

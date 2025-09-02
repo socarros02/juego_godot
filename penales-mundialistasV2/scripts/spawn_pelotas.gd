@@ -15,12 +15,14 @@ var vida=3
 @onready var mostrarPuntos: Label = $puntaje
 
 func _ready():
-	var popup = $MenuButton.get_popup()
-	popup.id_pressed.connect(_on_menu_option_selected)
 	for pelota in pelotas:
 		if pelota:
 			pelota.connect("pelota_cabeceada", Callable(self, "_on_pelota_cabeceada"))
 			pelota.connect("restarVida", Callable(self, "_on_restarVida")) 
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("PAUSA"):
+		_on_menu_button_pressed() 
 
 	
 func _on_restarVida():
@@ -41,8 +43,8 @@ func _on_pelota_cabeceada():
 func _on_timer_timeout() -> void:
 	var spawn_index = randi() % spawns.size()
 	var spawn_pos = spawns[spawn_index]
-
 	var pelota = pelotas[posicion]
+	
 	pelota.position = spawn_pos
 	pelota.visible = true
 	pelota.activa = true

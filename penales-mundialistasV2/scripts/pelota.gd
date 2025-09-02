@@ -9,24 +9,22 @@ var activa = false
 func _ready() -> void:
 	var menu= get_parent().get_parent().get_node("spawnPelotas/MenuButton")
 	menu.get_popup().id_pressed.connect(_on_menu_option_selected)
-
+	
 func _physics_process(delta: float) -> void:
 	if activa:
 		$cabeceada.position+=Vector2.LEFT*velocidad
 	if Input.is_action_just_pressed("PAUSA"):
 		_on_menu_button_pressed()
-		var menu= get_parent().get_parent().get_node("spawnPelotas/MenuButton")
-		menu.get_popup().id_pressed.connect(_on_menu_option_selected)
 
 func _on_cabeceada_body_entered(body: Node2D) -> void:
 	if body.name == "vanPersie":
 		emit_signal("pelota_cabeceada")
-		$cabeceada.global_position=Vector2(1600,300)
+		$cabeceada.global_position.x=1600
 		_reset()
 	
 	if body.name=="final":
 		emit_signal("restarVida")
-		$cabeceada.global_position=Vector2(1600,300)
+		$cabeceada.global_position.x=1600
 		_reset()
 
 

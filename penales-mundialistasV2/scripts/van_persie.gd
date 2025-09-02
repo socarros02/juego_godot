@@ -19,9 +19,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("PAUSA"):
-		_on_menu_button_pressed()       
-		var menu = get_parent().get_node("spawnPelotas/MenuButton")
-		menu.get_popup().popup()  
+		_on_menu_button_pressed()
+		var menu= get_parent().get_node("spawnPelotas/MenuButton")
+		menu.show_popup()
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if not vida:
