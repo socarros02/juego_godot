@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3sdmitu3tqh3"
+path="res://.godot/imported/REFEREE WHISTLE SOUND EFFECT.mp3-c123c2547ddb27649b22ee30bc9d3459.mp3str"
+
+[deps]
+
+source_file="res://imagen/animaciones/REFEREE WHISTLE SOUND EFFECT.mp3"
+dest_files=["res://.godot/imported/REFEREE WHISTLE SOUND EFFECT.mp3-c123c2547ddb27649b22ee30bc9d3459.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

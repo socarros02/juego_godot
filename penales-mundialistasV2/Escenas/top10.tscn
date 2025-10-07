@@ -1,0 +1,315 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1g8rqhqspok"]
+
+[ext_resource type="Script" uid="uid://b7ehr0hpn88x4" path="res://scripts/top_10.gd" id="1_fvdvo"]
+[ext_resource type="Texture2D" uid="uid://bnxd8jhrtc0ft" path="res://imagen/fondos/top 10.png" id="2_kf8x3"]
+[ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="3_we5ap"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_we5ap"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0jk2t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we5ap"]
+bg_color = Color(0.109804, 0.145098, 0.172549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jk2t"]
+bg_color = Color(0.960784, 0.815686, 0.384314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0862745, 0.137255, 0.176471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13muh"]
+bg_color = Color(0.109804, 0.145098, 0.172549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
+bg_color = Color(0.960784, 0.815686, 0.384314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0.701961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8bcg"]
+bg_color = Color(0.701961, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fvdvo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1148.0
+offset_bottom = 648.0
+texture = ExtResource("2_kf8x3")
+expand_mode = 1
+
+[node name="contenedorPenales" type="VBoxContainer" parent="."]
+material = SubResource("CanvasItemMaterial_we5ap")
+offset_left = 39.0
+offset_top = 135.0
+offset_right = 354.0
+offset_bottom = 541.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="contenedorPenales"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we5ap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TituloPenales" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = 67.0
+offset_right = 374.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_fonts/font = ExtResource("3_we5ap")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_0jk2t")
+text = "PENALES ARCADE"
+horizontal_alignment = 1
+
+[node name="TituloPalomita" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 765.0
+offset_top = 67.0
+offset_right = 1121.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_fonts/font = ExtResource("3_we5ap")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_0jk2t")
+text = "PALOMITA"
+horizontal_alignment = 1
+
+[node name="contenedorPenales2" type="VBoxContainer" parent="."]
+material = SubResource("CanvasItemMaterial_we5ap")
+offset_left = 788.0
+offset_top = 135.0
+offset_right = 1103.0
+offset_bottom = 541.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="contenedorPenales2"]
+material = SubResource("CanvasItemMaterial_0jk2t")
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_13muh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volver" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 544.0
+offset_right = 695.0
+offset_bottom = 615.0
+theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_colors/font_hover_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_colors/font_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_colors/font_focus_color = Color(0.109804, 0.145098, 0.172549, 1)
+theme_override_fonts/font = ExtResource("3_we5ap")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
+text = "VOLVER AL MENU"
+
+[connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]

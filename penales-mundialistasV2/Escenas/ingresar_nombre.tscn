@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://cny2alrblwbw4"]
+
+[ext_resource type="Script" uid="uid://4dij8gqdt3jr" path="res://scripts/ingresar_nombre.gd" id="1_jpgyp"]
+[ext_resource type="Texture2D" uid="uid://cusy4evxmc7v5" path="res://imagen/fondos/ingresarV2.jpg" id="2_jpgyp"]
+[ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="3_j5aic"]
+
+[sub_resource type="Theme" id="Theme_uq0hs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpgyp"]
+bg_color = Color(0.964706, 0.94902, 0.909804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
+bg_color = Color(0.168627, 0.686275, 0.215686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0.701961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8bcg"]
+bg_color = Color(0.701961, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jpgyp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -77.0
+offset_right = 1276.0
+offset_bottom = 668.0
+texture = ExtResource("2_jpgyp")
+expand_mode = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 268.0
+offset_right = 1081.0
+offset_bottom = 394.0
+theme = SubResource("Theme_uq0hs")
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpgyp")
+placeholder_text = "Click aqui....."
+alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 555.0
+offset_right = 673.0
+offset_bottom = 626.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_j5aic")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
+text = "AVANZAR⚽🕹️"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

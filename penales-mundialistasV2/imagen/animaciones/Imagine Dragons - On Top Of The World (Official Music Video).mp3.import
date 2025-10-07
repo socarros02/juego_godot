@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5v6ds2yrad26"
+path="res://.godot/imported/Imagine Dragons - On Top Of The World (Official Music Video).mp3-26afe107e34006b250ff23eeb729545a.mp3str"
+
+[deps]
+
+source_file="res://imagen/animaciones/Imagine Dragons - On Top Of The World (Official Music Video).mp3"
+dest_files=["res://.godot/imported/Imagine Dragons - On Top Of The World (Official Music Video).mp3-26afe107e34006b250ff23eeb729545a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

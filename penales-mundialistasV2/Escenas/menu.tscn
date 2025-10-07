@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8eet02hutawi"]
+[gd_scene load_steps=8 format=3 uid="uid://b8eet02hutawi"]
 
 [ext_resource type="Script" uid="uid://bi4t4tr6icowt" path="res://scripts/menu.gd" id="1_ouk20"]
 [ext_resource type="Texture2D" uid="uid://b4tmg6ayxv7o" path="res://imagen/fondos/estadio.jpg" id="2_p25xy"]
 [ext_resource type="FontFile" uid="uid://ctbdhalxquote" path="res://fuentes/ComicRelief-Bold.ttf" id="3_17m5t"]
+[ext_resource type="AudioStream" uid="uid://5v6ds2yrad26" path="res://imagen/animaciones/Imagine Dragons - On Top Of The World (Official Music Video).mp3" id="4_cp3rd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
 bg_color = Color(0.168627, 0.686275, 0.215686, 1)
@@ -87,6 +88,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp3rd")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kim34")
 theme_override_styles/normal = SubResource("StyleBoxFlat_v8bcg")
 text = "TABLA DE POSICIONES 🔟"
+
+[node name="musicaFondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cp3rd")
 
 [connection signal="pressed" from="modo de juego/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="modo de juego/Button2" to="." method="_on_button_2_pressed"]

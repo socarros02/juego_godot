@@ -24,8 +24,8 @@ func _process(delta):
 	if $potencia.value < $potencia.max_value:
 		$potencia.value += 75* faseActual * delta
 		valor_actual=$potencia.value
-	if $potencia.value == 100:
-		$potencia.value=$potencia.min_value
+	if $potencia.value >= $potencia.max_value:
+		$potencia.value = $potencia.min_value
 	actualizar_color_barra()
 	if Input.is_action_just_pressed("PAUSA"):
 		_on_menu_button_pressed()
@@ -90,7 +90,7 @@ var abajoDer=Vector2(784, 416)
 ##posiicon de pelota
 var puntoPenal= Vector2(547, 557)
 
-const faseMaxima=4
+const faseMaxima=3
 
 func _on_arriba_izquierda_pressed() -> void:
 	moverPelota(0)
@@ -175,12 +175,13 @@ func ataja(tiro,fase,vida,potencia):
 	elif potencia>75:
 		fase = fase - 1
 
+
 	for i in range(fase):
 		if tiro == opciones[i]:
 			gol=0
 			vidas[vida].visible=false
 	
-	if potencia>95:
+	if potencia>90:
 		gol=1
 	
 	return gol

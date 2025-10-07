@@ -32,12 +32,14 @@ func _on_restarVida():
 		$gameOver.visible=true
 		$Timer.stop()
 		$muerte.start()
+		
 func _on_pelota_cabeceada():
 	puntaje += 20
 	Global.puntoPalomita=puntaje
 	mostrarPuntos.text = "%03d" % puntaje
 	if puntaje==140:
 		$Timer.wait_time=2.0
+	
 
 
 func _on_timer_timeout() -> void:
@@ -65,3 +67,7 @@ func _on_menu_option_selected(id):
 		0:
 			$Timer.start()
 		
+
+
+func _on_sonido_cabeceado_timeout() -> void:
+	pass # Replace with function body.

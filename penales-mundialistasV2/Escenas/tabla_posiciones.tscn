@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://blwuowwhllpvs"]
+[gd_scene load_steps=2 format=3 uid="uid://buaqs00xsg3ck"]
 
-[ext_resource type="Script" uid="uid://bw8nmrgvv0fhc" path="res://scripts/tabla_posiciones.gd" id="1_yhphs"]
+[sub_resource type="GDScript" id="GDScript_w5rrw"]
+script/source = "extends Control
+"
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,4 +11,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yhphs")
+script = SubResource("GDScript_w5rrw")
